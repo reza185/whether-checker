@@ -1,0 +1,44 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+body{
+    background: linear-gradient(to bottom, #015eea, #00c0fa)no-repeat;
+  
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+}
+.city{
+    font-size: 40px;
+    color: rgb(2, 2, 99);
+}
+.text{font-size: 50px;
+color: rgb(2, 2, 99);}
+.pic{all: unset;height: 256px;width: 256px;
+    
+  
+  
+}
+.ice{
+    background-image: url('ice.png');
+  }
+  .snow{
+    background-image: url('ice.png');
+  }
+  .ok{background-image: url('ok.png');}
+  .okcloud{background-image: url('ok\ with\ cloud.png');}
+  .hot{background-image: url('hooot.png');}
+  
+ul{all: unset;
+display: flex;
+flex-direction: column;
+list-style-type: none;
+justify-items: center;
+align-items: center;
+margin-top: 130px;}
