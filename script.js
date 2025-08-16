@@ -1,6 +1,10 @@
 let wheterinf;
-fetch('https://api.open-meteo.com/v1/forecast?latitude=32.65&longitude=51.67&current_weather=true').then(json=>{return json.json();}).then(Date=>{wheterinf= Date.current_weather.temperature ;afterFetch(); });
-afterFetch=()=>{ const text=document.querySelector('.text');
+let wind;
+fetch('https://api.open-meteo.com/v1/forecast?latitude=32.65&longitude=51.67&current_weather=true').then(json=>{return json.json();}).then(Date=>{wheterinf= Date.current_weather.temperature ;wind=Date.current_weather.windspeed;afterFetch(); });
+afterFetch=()=>{ const windspeed=document.querySelector('.fixe');
+windspeed.innerHTML=`<button class="wind"></button>${wind}km/h`;
+    
+    const text=document.querySelector('.text');
 const pic=document.querySelector('.pic')
 text.innerHTML=`<p> ${wheterinf}°C</p>`;
 const week=document.querySelector('.week');
